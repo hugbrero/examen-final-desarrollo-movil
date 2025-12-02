@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Iniciar sesión</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <ion-item>
+          <ion-label position="floating">Correo electrónico</ion-label>
+          <ion-input
+            type="email"
+            formControlName="email">
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="email?.touched && email?.invalid">
+          <p *ngIf="email?.errors?.['required']">
+            El correo es obligatorio
+          </p>
+          <p *ngIf="email?.errors?.['email']">
+            Debe ser un correo válido
+          </p>
+        </ion-text>
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input
+            type="password"
+            formControlName="password">
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="password?.touched && password?.invalid">
+          <p *ngIf="password?.errors?.['required']">
+            La contraseña es obligatoria
+          </p>
+          <p *ngIf="password?.errors?.['minlength']">
+            Debe tener al menos 6 caracteres
+          </p>
+        </ion-text>
+
+        <ion-button
+          expand="block"
+          type="submit"
+          class="ion-margin-top"
+          [disabled]="loading">
+          {{ loading ? 'Ingresando...' : 'Iniciar sesión' }}
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

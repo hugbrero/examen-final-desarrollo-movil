@@ -1,0 +1,17 @@
+# Dependencias
+node_modules/
+
+# Build / salida
+www/
+dist/
+
+# Cache de Angular
+.angular/
+
+# Plataformas móviles (si las generas)
+android/
+ios/
+
+# IDEs
+.vscode/
+.idea/
