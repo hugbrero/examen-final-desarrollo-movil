@@ -17,7 +17,7 @@ La aplicación implementa un flujo de autenticación básico y una sección inte
 ---
 
 ## Estructura principal del proyecto
-
+---
 ```text
 src/
   app/
@@ -44,9 +44,10 @@ src/
         profile.page.ts
         profile.page.html
         profile.page.scss
+```
 ---
 ## Funcionalidades implementadas
-
+---
 ## 1. Formulario de Login
 
 ### Campos:
@@ -98,7 +99,7 @@ Métodos:
 
 ## 4. Sección interna protegida (/home)
 
-###Ruta protegida por authGuard.
+### Ruta protegida por authGuard.
 
 Contiene:
 
@@ -127,8 +128,8 @@ Contiene:
 ## Instalación y ejecución
 
 ### Clonar el repositorio
-git clone https://github.com/hugbrero/examen-final-desarrollo-movil.git
-cd examen-final-desarrollo-movil
+- git clone https://github.com/hugbrero/examen-final-desarrollo-movil.git
+- cd examen-final-desarrollo-movil
 
 ### Instalar dependencias
 npm install
